@@ -1,0 +1,138 @@
+<!--
+  Generated template for the SignupTeacherPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>teacher signup  </ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-list>
+
+    <ion-item>
+      <ion-label>your name</ion-label>
+      <ion-input type="text" [(ngModel)]="name"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>mobile number</ion-label>
+      <ion-input type="text" [(ngModel)]="mobile"></ion-input>
+    </ion-item>
+
+    <ion-list>
+      <ion-item>
+        <ion-label>Gender</ion-label>
+        <ion-select [(ngModel)]="gender">
+          <ion-option value="f">Female</ion-option>
+          <ion-option value="m">Male</ion-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+          <ion-label>courses</ion-label>
+        <ion-select [(ngModel)]="course">
+          <ion-option value="SC1">math</ion-option>                       <!--science-->
+          <ion-option value="SC2">physics</ion-option>                    <!--science-->
+          <ion-option value="SC3">chemistry</ion-option>                  <!--science-->
+          <ion-option value="lg1">english</ion-option>                    <!--language-->
+          <ion-option value="lg2">French</ion-option>                     <!--language-->
+          <ion-option checked="true" value="Lit1 ">geography</ion-option> <!--Literary--> 
+        </ion-select>
+      </ion-item>
+    </ion-list>
+  </ion-list>
+  
+  <ion-list>
+    <ion-list-header>
+      secondary school
+    </ion-list-header>
+
+
+    <ion-item>
+      <ion-label> First secondary</ion-label>
+      <ion-checkbox color="dark" checked="true" [(ngModel)]="first" ></ion-checkbox>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Second secondary</ion-label>
+      <ion-checkbox [(ngModel)]="second" [checked]="true"  ></ion-checkbox>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Third secondary</ion-label>
+      <ion-checkbox [(ngModel)]="third" [checked]="false"></ion-checkbox>
+    </ion-item>
+
+    <ion-list-header>
+      preparatory school
+    </ion-list-header>
+
+    <ion-item>
+      <ion-label>First prep</ion-label>
+      <ion-checkbox color="secondary"></ion-checkbox>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Second prep </ion-label>
+      <ion-checkbox color="secondary"></ion-checkbox>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Third prep </ion-label>
+      <ion-checkbox color="secondary"></ion-checkbox>
+    </ion-item>
+    
+    <ion-list-header>
+      primary school 
+    </ion-list-header>
+    
+    <ion-item>
+      <ion-label>1 th</ion-label>
+      <ion-checkbox color="danger" ></ion-checkbox>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>2 th</ion-label>
+      <ion-checkbox color="danger"></ion-checkbox>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>3 th</ion-label>
+      <ion-checkbox color="danger"></ion-checkbox>
+    </ion-item>
+  </ion-list>
+
+  <ion-item>
+    <ion-label>Years of experience</ion-label>
+    <ion-input type="text" [(ngModel)]="experience"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Course location</ion-label>
+    <ion-input type="text" [(ngModel)]="location"></ion-input>
+  </ion-item>
+
+  <ion-item>
+      <ion-label>password</ion-label>
+      <ion-input type="password" [(ngModel)]="password"></ion-input>
+  </ion-item>
+
+  <ion-item>
+      <ion-label>confirm password</ion-label>
+      <ion-input type="password" [(ngModel)]="confirm"></ion-input>
+  </ion-item>
+
+
+  <div padding>
+      <button ion-button block (click)="addteacher(name,mobile,gender,course,first,second,third,experience,location,password,confirm)">Sign Up</button>
+
+  </div>
+
+</ion-content>
